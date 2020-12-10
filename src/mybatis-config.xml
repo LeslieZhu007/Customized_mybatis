@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <!--mybatis环境的配置,使用默认环境-->
+    <environments default="development">
+        <!--在实际开发环境中， -->
+        <!--通常我们只需要配置一个就可以了， id是环境的名字 -->
+        <environment id="development">
+            <!--事务管理器：由JDBC来管理-->
+            <!--关于事务和数据源都是后期学习的Spring框架管理，这里我们不用管-->
+            <transactionManager type="JDBC"/>
+            <!--数据源的配置：mybatis自带的连接池-->
+            <dataSource type="POOLED">
+                <!--数据库驱动-->
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <!--数据库地址-->
+                <property name="url" value="jdbc:mysql://localhost:3306/day06"/>
+                <!--数据库用户名-->
+                <property name="username" value="root"/>
+                <!--数据库密码-->
+                <property name="password" value="1234"/>
+            </dataSource>
+        </environment>
+    </environments>
+<!--    标签可以随便定义-->
+    <username>  zhangsan  </username>
+    <!--加载映射文件-->
+    <mappers>
+        <!--加载映射文件,放到src下即可-->
+        <mapper resource="userMapper.xml"/>
+
+
+    </mappers>
+</configuration>

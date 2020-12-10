@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<mapper namespace="com.itheima.sh.dao.UserMapper">
+    <!--queryAllUsers是接口的方法名-->
+    <select id="queryAllUsers" resultType="com.itheima.sh.pojo.User">
+        select * from user
+    </select>
+
+</mapper>
